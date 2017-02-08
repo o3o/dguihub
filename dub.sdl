@@ -1,0 +1,5 @@
+name "dguihub"
+description "A graphic library for Windows (github version)."
+authors "Trogu Antonio Davide" "Denis Shelomovskii" "Orfeo Da Vià"
+copyright "Copyright © 2011-2013, Trogu Antonio Davide"
+license "Boost"

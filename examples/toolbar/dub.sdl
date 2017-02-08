@@ -1,0 +1,10 @@
+name "tb"
+description "Simple toolbar example"
+authors "Orfeo Da Viá"
+copyright "Copyright © 2017, o3o"
+license "LGPL v3.0.0"
+sourcePaths "."
+targetType "executable"
+lflags "/subsystem:windows" platform="windows"
+
+dependency "dguihub" path="../../"
