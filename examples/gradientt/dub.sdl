@@ -2,7 +2,7 @@ name "gradientt"
 description "Simple gradientt example"
 authors "Orfeo Da Viá"
 copyright "Copyright © 2017, o3o"
-license "LGPL v3.0.0"
+license "Boost"
 sourcePaths "."
 targetType "executable"
 
