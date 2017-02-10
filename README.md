@@ -1,4 +1,7 @@
 # DGui Graphic Library
+[![Dub version](https://img.shields.io/dub/v/dguihub.svg)](https://code.dlang.org/packages/dguihub)
+[![Dub downloads](https://img.shields.io/dub/dt/dguihub.svg)](https://code.dlang.org/packages/dguihub)
+
 Yet another fork of [DGui Form Library](https://bitbucket.org/dgui/dgui)
 
 ## Compiling DGuiHub
