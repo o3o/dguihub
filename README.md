@@ -49,7 +49,7 @@ $ dub run dguihub:hello
 | Project                                     | Author        |
 | -----------------------------               | -------       |
 | [DGui](https://bitbucket.org/dgui/dgui)     | Antonio Trogu |
-| [DGuiT](https://github.com/]rankLIKE/DguiT) | FrankLike     |
+| [DGuiT](https://github.com/FrankLIKE/DguiT) | FrankLike     |
 
 ## License
 The project is licensed under the terms of the [Boost Software License, Version 1.0](http://boost.org/LICENSE_1_0.txt).
