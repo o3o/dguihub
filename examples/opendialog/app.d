@@ -19,6 +19,7 @@ class MainForm : Form {
 
    private void onBtnOkClick(Control sender, EventArgs e) {
       FileBrowserDialog dlg = new FileBrowserDialog();
+      dlg.filter = "D Lang file (*.d)|*.d|All files (*.*)|*.*";
       dlg.showDialog();
       MsgBox.show("OnClick", dlg.result);
    }

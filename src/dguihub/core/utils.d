@@ -69,16 +69,20 @@ string getTempPath() {
 }
 
 string makeFilter(string userFilter) {
-   char[] newFilter = cast(char[])userFilter;
-
-   foreach (ref char ch; newFilter) {
+   char[] newFilter;
+   foreach (char ch; userFilter) {
       if (ch == '|') {
-         ch = '\0';
+         newFilter ~= '\0';
+      } else {
+         newFilter ~= ch;
       }
    }
 
    newFilter ~= '\0';
    return newFilter.idup;
+} unittest {
+   assert(makeFilter("a") == "a\0");
+   assert(makeFilter("a|b") == "a\0b\0");
 }
 
 public WindowsVersion getWindowsVersion() {
