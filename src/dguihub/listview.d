@@ -8,7 +8,7 @@ Authors: Trogu Antonio Davide
 */
 module dguihub.listview;
 
-import std.utf : toUTF8;
+import std.utf : toUTFz;
 public import dguihub.core.controls.ownerdrawcontrol;
 import dguihub.core.utils;
 import dguihub.imagelist;
