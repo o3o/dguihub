@@ -115,3 +115,25 @@ public WindowsVersion getWindowsVersion() {
 
    return ver;
 }
+
+/**
+* Returns a wstring from a wchar array
+*
+* see https://github.com/AndrejMitrovic/DWinProgramming/blob/bbd6cc282468add8c8dbb1de1046a40e5ecb6be0/Samples/Chap22/Drum/DrumFile.d
+*/
+wstring fromWStringz(const wchar* s) {
+   if (s is null) return null;
+
+   wchar* ptr;
+   for (ptr = cast(wchar*)s; *ptr; ++ptr) {}
+
+   return to!wstring(s[0..ptr-s]);
+} unittest {
+   wchar[] buffer = new wchar[](256);
+   buffer[] = '\0';
+   buffer[0] = 'é';
+   wstring res = fromWStringz(buffer.ptr);
+
+   import std.string;
+   assert(res.length == 1, "len is %s".format(res.length));
+}

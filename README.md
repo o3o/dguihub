@@ -10,6 +10,9 @@ The simplest way to compile is to use [dub](http://code.dlang.org/) package.
 ```
 $ dub build
 ```
+## API Reference
+See [api]()
+
 ## Simple example
 ```
 module hello;

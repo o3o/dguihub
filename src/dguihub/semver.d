@@ -1,14 +1,10 @@
 /**
-* Module containing [semantic version](http://semver.org/)
-*/
+ * Module containing [semantic version](http://semver.org/)
+ */
 module dguihub.semver;
-
-/**
-* Library version
-*/
-enum VERSION = "0.1.1";
 
 /**
  * Tagged library version (with *v* prefix)
  */
+enum VERSION = "0.1.2";
 enum TAG_VERSION = "v" ~ VERSION;

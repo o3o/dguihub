@@ -11,7 +11,8 @@ module dguihub.folderbrowserdialog;
 pragma(lib, "shell32.lib");
 
 public import dguihub.core.dialogs.commondialog;
-import std.utf : toUTFz, toUTF8;
+import dguihub.core.utils;
+
 import std.conv;
 
 class FolderBrowserDialog : CommonDialog!(BROWSEINFOW, string) {
@@ -29,7 +30,7 @@ class FolderBrowserDialog : CommonDialog!(BROWSEINFOW, string) {
 
       if (pidl) {
          SHGetPathFromIDListW(pidl, buffer.ptr); //Get Full Path.
-         this._dlgRes = toUTF8(buffer);
+         this._dlgRes = to!string(fromWStringz(buffer.ptr));
          return true;
       }
 
