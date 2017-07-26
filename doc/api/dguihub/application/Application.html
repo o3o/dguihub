@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../../style.css"/>
+<script src="../../highlight.pack.js"></script>
+<title>Application</title>
+<base href="../../"/>
+<script src="search.js"></script>
+<script src="show_hide.js"></script>
+</head>
+<body>
+<div class="main">
+<div class="breadcrumbs">
+<table id="results"></table>
+<a href="index.html" class="home">⌂</a><input type="search" id="search" placeholder="Search" onkeyup="searchSubmit(this.value, event)"/>
+<small>dguihub.<a href=dguihub/application.html>application</a>.</small><span class="highlight">Application</span>
+</div>
+<div class="sidebar">
+<a href="dguihub/application.html#hide-toc" class="hide" id="hide-toc">&#171;</a>
+<a href="dguihub/application.html#show-toc" class="show" id="show-toc">&#187;</a>
+<div id="toc-id" class="toc">
+<ul><li><span class="package" onclick="show_hide('dguihub');"><a href="dguihub.html">dguihub</a></span>
+<ul id="dguihub" style='display:block'>
+<li><span class=" selected">dguihub.<a href="dguihub/application.html">application</a></span>
+</li>
+<li>dguihub.<a href="dguihub/button.html">button</a></li>
+<li>dguihub.<a href="dguihub/canvas.html">canvas</a></li>
+<li>dguihub.<a href="dguihub/colordialog.html">colordialog</a></li>
+<li>dguihub.<a href="dguihub/combobox.html">combobox</a></li>
+<li>dguihub.<a href="dguihub/contextmenu.html">contextmenu</a></li>
+<li><span class="package" onclick="show_hide('dguihub.core');">dguihub.core</span>
+<ul id="dguihub.core">
+<li>dguihub.core.<a href="dguihub/core/charset.html">charset</a></li>
+<li>dguihub.core.<a href="dguihub/core/collection.html">collection</a></li>
+<li><span class="package" onclick="show_hide('dguihub.core.controls');">dguihub.core.controls</span>
+<ul id="dguihub.core.controls">
+<li>dguihub.core.controls.<a href="dguihub/core/controls/abstractbutton.html">abstractbutton</a></li>
+<li>dguihub.core.controls.<a href="dguihub/core/controls/containercontrol.html">containercontrol</a></li>
+<li>dguihub.core.controls.<a href="dguihub/core/controls/control.html">control</a></li>
+<li>dguihub.core.controls.<a href="dguihub/core/controls/ownerdrawcontrol.html">ownerdrawcontrol</a></li>
+<li>dguihub.core.controls.<a href="dguihub/core/controls/reflectedcontrol.html">reflectedcontrol</a></li>
+<li>dguihub.core.controls.<a href="dguihub/core/controls/scrollablecontrol.html">scrollablecontrol</a></li>
+<li>dguihub.core.controls.<a href="dguihub/core/controls/subclassedcontrol.html">subclassedcontrol</a></li>
+<li>dguihub.core.controls.<a href="dguihub/core/controls/textcontrol.html">textcontrol</a></li>
+</ul>
+</li>
+<li><span class="package" onclick="show_hide('dguihub.core.dialogs');">dguihub.core.dialogs</span>
+<ul id="dguihub.core.dialogs">
+<li>dguihub.core.dialogs.<a href="dguihub/core/dialogs/commondialog.html">commondialog</a></li>
+<li>dguihub.core.dialogs.<a href="dguihub/core/dialogs/dialogresult.html">dialogresult</a></li>
+</ul>
+</li>
+<li><span class="package" onclick="show_hide('dguihub.core.events');">dguihub.core.events</span>
+<ul id="dguihub.core.events">
+<li>dguihub.core.events.<a href="dguihub/core/events/controlcodeeventargs.html">controlcodeeventargs</a></li>
+<li>dguihub.core.events.<a href="dguihub/core/events/event.html">event</a></li>
+<li>dguihub.core.events.<a href="dguihub/core/events/eventargs.html">eventargs</a></li>
+<li>dguihub.core.events.<a href="dguihub/core/events/keyeventargs.html">keyeventargs</a></li>
+<li>dguihub.core.events.<a href="dguihub/core/events/mouseeventargs.html">mouseeventargs</a></li>
+<li>dguihub.core.events.<a href="dguihub/core/events/painteventargs.html">painteventargs</a></li>
+<li>dguihub.core.events.<a href="dguihub/core/events/scrolleventargs.html">scrolleventargs</a></li>
+</ul>
+</li>
+<li>dguihub.core.<a href="dguihub/core/exception.html">exception</a></li>
+<li>dguihub.core.<a href="dguihub/core/geometry.html">geometry</a></li>
+<li>dguihub.core.<a href="dguihub/core/handle.html">handle</a></li>
+<li><span class="package" onclick="show_hide('dguihub.core.interfaces');">dguihub.core.interfaces</span>
+<ul id="dguihub.core.interfaces">
+<li>dguihub.core.interfaces.<a href="dguihub/core/interfaces/idisposable.html">idisposable</a></li>
+<li>dguihub.core.interfaces.<a href="dguihub/core/interfaces/ilayoutcontrol.html">ilayoutcontrol</a></li>
+</ul>
+</li>
+<li><span class="package" onclick="show_hide('dguihub.core.menu');">dguihub.core.menu</span>
+<ul id="dguihub.core.menu">
+<li>dguihub.core.menu.<a href="dguihub/core/menu/abstractmenu.html">abstractmenu</a></li>
+</ul>
+</li>
+<li>dguihub.core.<a href="dguihub/core/message.html">message</a></li>
+<li>dguihub.core.<a href="dguihub/core/tag.html">tag</a></li>
+<li>dguihub.core.<a href="dguihub/core/utils.html">utils</a></li>
+<li>dguihub.core.<a href="dguihub/core/winapi.html">winapi</a></li>
+<li>dguihub.core.<a href="dguihub/core/wincomp.html">wincomp</a></li>
+<li>dguihub.core.<a href="dguihub/core/windowclass.html">windowclass</a></li>
+</ul>
+</li>
+<li>dguihub.<a href="dguihub/filebrowserdialog.html">filebrowserdialog</a></li>
+<li>dguihub.<a href="dguihub/folderbrowserdialog.html">folderbrowserdialog</a></li>
+<li>dguihub.<a href="dguihub/fontdialog.html">fontdialog</a></li>
+<li>dguihub.<a href="dguihub/form.html">form</a></li>
+<li>dguihub.<a href="dguihub/imagelist.html">imagelist</a></li>
+<li>dguihub.<a href="dguihub/label.html">label</a></li>
+<li><span class="package" onclick="show_hide('dguihub.layout');">dguihub.layout</span>
+<ul id="dguihub.layout">
+<li>dguihub.layout.<a href="dguihub/layout/gridpanel.html">gridpanel</a></li>
+<li>dguihub.layout.<a href="dguihub/layout/layoutcontrol.html">layoutcontrol</a></li>
+<li>dguihub.layout.<a href="dguihub/layout/panel.html">panel</a></li>
+<li>dguihub.layout.<a href="dguihub/layout/splitpanel.html">splitpanel</a></li>
+</ul>
+</li>
+<li>dguihub.<a href="dguihub/listbox.html">listbox</a></li>
+<li>dguihub.<a href="dguihub/listview.html">listview</a></li>
+<li>dguihub.<a href="dguihub/menubar.html">menubar</a></li>
+<li>dguihub.<a href="dguihub/messagebox.html">messagebox</a></li>
+<li>dguihub.<a href="dguihub/picturebox.html">picturebox</a></li>
+<li>dguihub.<a href="dguihub/progressbar.html">progressbar</a></li>
+<li>dguihub.<a href="dguihub/registry.html">registry</a></li>
+<li>dguihub.<a href="dguihub/resources.html">resources</a></li>
+<li>dguihub.<a href="dguihub/richtextbox.html">richtextbox</a></li>
+<li>dguihub.<a href="dguihub/scrollbar.html">scrollbar</a></li>
+<li>dguihub.<a href="dguihub/semver.html">semver</a></li>
+<li>dguihub.<a href="dguihub/statusbar.html">statusbar</a></li>
+<li>dguihub.<a href="dguihub/tabcontrol.html">tabcontrol</a></li>
+<li>dguihub.<a href="dguihub/textbox.html">textbox</a></li>
+<li>dguihub.<a href="dguihub/timer.html">timer</a></li>
+<li>dguihub.<a href="dguihub/toolbar.html">toolbar</a></li>
+<li>dguihub.<a href="dguihub/tooltip.html">tooltip</a></li>
+<li>dguihub.<a href="dguihub/trackbar.html">trackbar</a></li>
+<li>dguihub.<a href="dguihub/treeview.html">treeview</a></li>
+</ul>
+</li>
+
+</ul>
+</div></div>
+<div class="content">
+<div class="aggregate-symbol"><div class="description"><pre><code>public class Application
+</code></pre>
+<div class="section"><h2></h2>
+<p>The _Application class manage the whole program, it can be used for load embedded resources,
+close the program, get the current path and so on.
+Internally in initialize manifest (if available), DLLs, and it handle exceptions showing a window with exception information.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div><a class="anchor" id="instance"></a><div class="symbol"><div class="description"><pre><code>public @property static HINSTANCE <a href="dguihub/application/Application.html#instance">instance</a>()
+</code></pre>
+<div class="section"><h2></h2>
+<p>Static constructor (it enable the manifest, if available)
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="executablePath"></a><div class="symbol"><div class="description"><pre><code>public @property static string <a href="dguihub/application/Application.html#executablePath">executablePath</a>()
+</code></pre>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2>Returns</h2>
+<p>String value of the executable path (<b>including</b> the executable name)
+</p>
+
+
+</div>
+</div></div><a class="anchor" id="tempPath"></a><div class="symbol"><div class="description"><pre><code>public @property static string <a href="dguihub/application/Application.html#tempPath">tempPath</a>()
+</code></pre>
+<div class="section"><h2></h2>
+<p>This method calls GetTempPath() API
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+<p>Returns
+</p>
+
+
+</div>
+<div class="section"><h2>Returns</h2>
+<p>String value of the system's TEMP directory
+</p>
+
+
+</div>
+</div></div><a class="anchor" id="startupPath"></a><div class="symbol"><div class="description"><pre><code>public @property static string <a href="dguihub/application/Application.html#startupPath">startupPath</a>()
+</code></pre>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2>Returns</h2>
+<p>String value of the executable path (<b>without</b> the executable name)
+</p>
+
+
+</div>
+</div></div><a class="anchor" id="resources"></a><div class="symbol"><div class="description"><pre><code>public @property static Resources <a href="dguihub/application/Application.html#resources">resources</a>()
+</code></pre>
+<div class="section"><h2></h2>
+<p>This property allows to load embedded _resources.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+<p>Returns
+</p>
+
+
+</div>
+<div class="section"><h2>Returns</h2>
+<p>The Instance of reource object
+</p>
+<pre class="prettyprint"><code>See_Also
+</code></pre>
+
+</div>
+<div class="section seealso">
+<h2>See Also:</h2>
+<div class="seealso-content">
+<p>Resources Class
+</p>
+
+</div>
+</div>
+</div></div><a class="anchor" id="enableManifest"></a><div class="symbol"><div class="description"><pre><code>private static <a href="http://dlang.org/type.html#basic-data-types">void</a> <a href="dguihub/application/Application.html#enableManifest">enableManifest</a>()
+</code></pre>
+<div class="section"><h2></h2>
+<p>Internal method that enable XP Manifest (if available)
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="initCommonControls"></a><div class="symbol"><div class="description"><pre><code>private static <a href="http://dlang.org/type.html#basic-data-types">void</a> <a href="dguihub/application/Application.html#initCommonControls">initCommonControls</a>()
+</code></pre>
+<div class="section"><h2></h2>
+<p>Internal method that loads ComCtl32 DLL
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="doRun"></a><div class="symbol"><div class="description"><pre><code>private static <a href="http://dlang.org/type.html#basic-data-types">int</a> <a href="dguihub/application/Application.html#doRun">doRun</a>(Form mainForm)
+</code></pre>
+<div class="section"><h2></h2>
+<p>Start the program and handles handles Exception
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2>Parameters</h2>
+<table class="params">
+<tr class="param"><td class="paramName">mainForm</td><td class="paramDoc"><p>The Application's main form
+</p>
+</td></tr>
+</table>
+</div>
+<div class="section"><h2>Returns</h2>
+<p>Zero
+</p>
+
+
+</div>
+</div></div><a class="anchor" id="run"></a><div class="symbol"><div class="description"><pre><code>public static <a href="http://dlang.org/type.html#basic-data-types">int</a> <a href="dguihub/application/Application.html#run">run</a>(Form mainForm)
+</code></pre>
+<div class="section"><h2></h2>
+<p>Start the program and adds onClose() event at the MainForm
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2>Parameters</h2>
+<table class="params">
+<tr class="param"><td class="paramName">mainForm</td><td class="paramDoc"><p>The Application's main form
+</p>
+</td></tr>
+</table>
+</div>
+<div class="section"><h2>Returns</h2>
+<p>Zero
+</p>
+
+
+</div>
+</div></div><a class="anchor" id="exit"></a><div class="symbol"><div class="description"><pre><code>public static <a href="http://dlang.org/type.html#basic-data-types">void</a> <a href="dguihub/application/Application.html#exit">exit</a>(<a href="http://dlang.org/type.html#basic-data-types">int</a> exitCode = 0)
+</code></pre>
+<div class="section"><h2></h2>
+<p>Close the program.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2>Parameters</h2>
+<table class="params">
+<tr class="param"><td class="paramName">exitCode</td><td class="paramDoc"><p>Exit code of the program (usually is 0)
+</p>
+</td></tr>
+</table>
+</div>
+</div></div><a class="anchor" id="showExceptionForm"></a><div class="symbol"><div class="description"><pre><code>package static DialogResult <a href="dguihub/application/Application.html#showExceptionForm">showExceptionForm</a>(Throwable e)
+</code></pre>
+<div class="section"><h2></h2>
+<p>When an exception was thrown, the _Application class call this method
+showing the exception information, the user has the choice to continue the
+application or terminate it.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2>Returns</h2>
+<p>A DialogResult enum that contains the button clicked by the user (ignore or abort)
+</p>
+
+
+</div>
+</div></div><a class="anchor" id="onMainFormClose"></a><div class="symbol"><div class="description"><pre><code>private static <a href="http://dlang.org/type.html#basic-data-types">void</a> <a href="dguihub/application/Application.html#onMainFormClose">onMainFormClose</a>(
+    Control sender, 
+    EventArgs e)
+</code></pre>
+<div class="section"><h2></h2>
+<p>Close _Application event attached (internally) at the main form
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><div class="section members"><h2>Functions</h2><table><tr><td><a href="dguihub/application/Application.html#instance">instance</a><span class="extrainfo"></span></td><td></td><td></td></tr><tr><td><a href="dguihub/application/Application.html#executablePath">executablePath</a><span class="extrainfo"></span></td><td></td><td>Returns: <p>String value of the executable path (<b>including</b> the executable name)
+</p>
+</td></tr><tr><td><a href="dguihub/application/Application.html#tempPath">tempPath</a><span class="extrainfo"></span></td><td></td><td>Returns: <p>String value of the system's TEMP directory
+</p>
+</td></tr><tr><td><a href="dguihub/application/Application.html#startupPath">startupPath</a><span class="extrainfo"></span></td><td></td><td>Returns: <p>String value of the executable path (<b>without</b> the executable name)
+</p>
+</td></tr><tr><td><a href="dguihub/application/Application.html#resources">resources</a><span class="extrainfo"></span></td><td></td><td>Returns: <p>Resources Class
+</p>
+</td></tr><tr><td><a href="dguihub/application/Application.html#enableManifest">enableManifest</a><span class="extrainfo"></span></td><td></td><td></td></tr><tr><td><a href="dguihub/application/Application.html#initCommonControls">initCommonControls</a><span class="extrainfo"></span></td><td></td><td></td></tr><tr><td><a href="dguihub/application/Application.html#doRun">doRun</a><span class="extrainfo"></span></td><td></td><td>Returns: <p>Zero
+</p>
+</td></tr><tr><td><a href="dguihub/application/Application.html#run">run</a><span class="extrainfo"></span></td><td></td><td>Returns: <p>Zero
+</p>
+</td></tr><tr><td><a href="dguihub/application/Application.html#exit">exit</a><span class="extrainfo"></span></td><td></td><td></td></tr><tr><td><a href="dguihub/application/Application.html#showExceptionForm">showExceptionForm</a><span class="extrainfo"></span></td><td></td><td>Returns: <p>A DialogResult enum that contains the button clicked by the user (ignore or abort)
+</p>
+</td></tr><tr><td><a href="dguihub/application/Application.html#onMainFormClose">onMainFormClose</a><span class="extrainfo"></span></td><td></td><td></td></tr></table>
+</div>
+</div><script>hljs.initHighlightingOnLoad();</script>
+
+</div>
+<footer>
+Generated with <a href="https://github.com/kiith-sa/harbored-mod">harbored-mod</a>
+</footer>
+</div>
+</body>
+</html>

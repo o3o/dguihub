@@ -1,26 +1,28 @@
 /** DGui project file.
-
-Copyright: Trogu Antonio Davide 2011-2013
-
-License: $(HTTP boost.org/LICENSE_1_0.txt, Boost License 1.0).
-
-Authors: Trogu Antonio Davide
-*/
+ *
+ * Copyright: Trogu Antonio Davide 2011-2013
+ *
+ * License: $(HTTP boost.org/LICENSE_1_0.txt, Boost License 1.0).
+ *
+ * Authors: Trogu Antonio Davide
+ */
 module dguihub.core.controls.abstractbutton;
 
 public import dguihub.core.dialogs.dialogresult;
 public import dguihub.core.controls.ownerdrawcontrol;
 
 /**
-  Enum that contain the check state of a _CheckBox or similar component
-  */
+ * Enum that contain the check state of a *CheckBox* or similar component
+ */
 enum CheckState : uint {
    checked = BST_CHECKED, ///Checked State
    unchecked = BST_UNCHECKED, ///Unchecked State
    indeterminate = BST_INDETERMINATE, ///Indeterminate State
 }
 
-/// Abstract class of a _Button/_CheckBox/_RadioButton
+/**
+ * Abstract class of a *Button* *CheckBox and *RadioButton*
+ */
 abstract class AbstractButton : OwnerDrawControl {
    protected DialogResult _dr = DialogResult.none;
 
@@ -35,82 +37,84 @@ abstract class AbstractButton : OwnerDrawControl {
 
    protected override void onReflectedMessage(ref Message m) {
       switch (m.msg) {
-      case WM_COMMAND: {
-            switch (HIWORD(m.wParam)) {
-            case BN_CLICKED: {
-                  MouseKeys mk = MouseKeys.none;
+         case WM_COMMAND: {
+                             switch (HIWORD(m.wParam)) {
+                                case BN_CLICKED: {
+                                                    MouseKeys mk = MouseKeys.none;
 
-                  if (GetAsyncKeyState(MK_LBUTTON)) {
-                     mk |= MouseKeys.left;
-                  }
+                                                    if (GetAsyncKeyState(MK_LBUTTON)) {
+                                                       mk |= MouseKeys.left;
+                                                    }
 
-                  if (GetAsyncKeyState(MK_MBUTTON)) {
-                     mk |= MouseKeys.middle;
-                  }
+                                                    if (GetAsyncKeyState(MK_MBUTTON)) {
+                                                       mk |= MouseKeys.middle;
+                                                    }
 
-                  if (GetAsyncKeyState(MK_RBUTTON)) {
-                     mk |= MouseKeys.right;
-                  }
+                                                    if (GetAsyncKeyState(MK_RBUTTON)) {
+                                                       mk |= MouseKeys.right;
+                                                    }
 
-                  Point p = Point(LOWORD(m.lParam), HIWORD(m.lParam));
-                  scope MouseEventArgs e = new MouseEventArgs(p, mk);
-                  this.onClick(EventArgs.empty);
+                                                    Point p = Point(LOWORD(m.lParam), HIWORD(m.lParam));
+                                                    scope MouseEventArgs e = new MouseEventArgs(p, mk);
+                                                    this.onClick(EventArgs.empty);
 
-                  if (this._dr !is DialogResult.none) {
-                     Control c = this.topLevelControl;
+                                                    if (this._dr !is DialogResult.none) {
+                                                       Control c = this.topLevelControl;
 
-                     if (c) {
-                        c.sendMessage(DGUI_SETDIALOGRESULT, this._dr, 0);
-                     }
-                  }
-               }
-               break;
+                                                       if (c) {
+                                                          c.sendMessage(DGUI_SETDIALOGRESULT, this._dr, 0);
+                                                       }
+                                                    }
+                                                 }
+                                                 break;
 
-            default:
-               break;
-            }
-         }
-         break;
+                                default:
+                                                 break;
+                             }
+                          }
+                          break;
 
-      default:
-         break;
+         default:
+                          break;
       }
 
       super.onReflectedMessage(m);
    }
 }
 
-/// Abstract class of a checkable button (_CheckBox, _RadioButton, ...)
+/**
+ * Abstract class of a checkable button (_CheckBox, _RadioButton, ...)
+ */
 abstract class CheckedButton : AbstractButton {
    public Event!(Control, EventArgs) checkChanged; ///Checked Changed Event of a Checkable _Button
 
    private CheckState _checkState = CheckState.unchecked;
 
    /**
-	 Returns:
-		True if the _Button is _checked otherwise False.
-
-	 See_Also:
-		checkState() property below.
-	 */
+    * Returns:
+    * True if the _Button is _checked otherwise False.
+    *
+    * See_Also:
+    * checkState() property below.
+    */
    @property public bool checked() {
       return this.checkState is CheckState.checked;
    }
 
    /**
-	  Sets the checked state of a checkable _button
-
-	  Params:
-		True checks the _button, False unchecks it.
-	  */
+    * Sets the checked state of a checkable _button
+    *
+    * Params:
+    * True checks the _button, False unchecks it.
+    */
    @property public void checked(bool b) {
       this.checkState = b ? CheckState.checked : CheckState.unchecked;
    }
 
    /**
-	  Returns:
-		A CheckState enum that returns the state of the checkable button (it includes the indeterminate state too)
-	  */
+    * Returns:
+    * A CheckState enum that returns the state of the checkable button (it includes the indeterminate state too)
+    */
    @property public CheckState checkState() {
       if (this.created) {
          return cast(CheckState)this.sendMessage(BM_GETCHECK, 0, 0);
@@ -120,8 +124,8 @@ abstract class CheckedButton : AbstractButton {
    }
 
    /**
-	  Sets the check state of a checkable button
-	  */
+    * Sets the check state of a checkable button
+    */
    @property public void checkState(CheckState cs) {
       this._checkState = cs;
 
@@ -137,25 +141,25 @@ abstract class CheckedButton : AbstractButton {
 
    protected override void onReflectedMessage(ref Message m) {
       switch (m.msg) {
-      case WM_COMMAND: {
-            switch (HIWORD(m.wParam)) {
-            case BN_CLICKED: {
-                  if (this._checkState !is this.checkState) //Is Check State Changed?
-                  {
-                     this._checkState = this.checkState;
-                     this.onCheckChanged(EventArgs.empty);
-                  }
-               }
-               break;
+         case WM_COMMAND: {
+                             switch (HIWORD(m.wParam)) {
+                                case BN_CLICKED: {
+                                                    if (this._checkState !is this.checkState) //Is Check State Changed?
+                                                    {
+                                                       this._checkState = this.checkState;
+                                                       this.onCheckChanged(EventArgs.empty);
+                                                    }
+                                                 }
+                                                 break;
 
-            default:
-               break;
-            }
-         }
-         break;
+                                default:
+                                                 break;
+                             }
+                          }
+                          break;
 
-      default:
-         break;
+         default:
+                          break;
       }
 
       super.onReflectedMessage(m);
