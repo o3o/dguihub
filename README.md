@@ -11,8 +11,8 @@ The simplest way to compile is to use [dub](http://code.dlang.org/) package.
 $ dub build
 ```
 ## API Reference
-See [api]()
-
+See [api](http://htmlpreview.github.io/?https://github.com/o3o/dguihub/blob/master/doc/api/index.html)
+ 
 ## Simple example
 ```
 module hello;
