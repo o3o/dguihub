@@ -947,7 +947,7 @@ class Bitmap : Image {
       return Bitmap.getData(this._handle, bd);
    }
 
-   private static void setData(HBITMAP hBitmap, ref BitmapData bd) {
+   static void setData(HBITMAP hBitmap, ref BitmapData bd) {
       HDC hdc = GetWindowDC(null);
       SetDIBits(hdc, hBitmap, 0, bd.info.bmiHeader.biHeight,
             cast(RGBQUAD*)bd.bits, bd.info, DIB_RGB_COLORS);
